@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A cozy place to collect and organize your favorite recipes."
+    />
+    <title>Recipe Box — Your kitchen, collected</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Recipe Box home">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>recipe box</span>
+        </a>
+        <span class="topbar-note"><span class="status-dot"></span> Made for good food</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">A LITTLE INSPIRATION, EVERY DAY</p>
+        <h1 id="page-title">Your kitchen,<br /><span>beautifully collected.</span></h1>
+        <p class="intro-copy">
+          Keep the recipes you love close at hand. Add a favorite, save it for later,
+          and make something wonderful.
+        </p>
+      </section>
+
+      <section class="recipe-workspace" aria-label="Your recipes">
+        <form class="recipe-form" id="recipe-form">
+          <div class="form-heading">
+            <div>
+              <p class="eyebrow">START A COLLECTION</p>
+              <h2>Add a recipe</h2>
+            </div>
+            <span class="form-icon" aria-hidden="true">✳</span>
+          </div>
+
+          <label for="recipe-name">Recipe name</label>
+          <input
+            id="recipe-name"
+            name="name"
+            type="text"
+            placeholder="e.g. Sunday tomato pasta"
+            maxlength="80"
+            required
+          />
+
+          <label for="recipe-description">A little description</label>
+          <textarea
+            id="recipe-description"
+            name="description"
+            rows="3"
+            placeholder="What makes it special?"
+            maxlength="280"
+            required
+          ></textarea>
+
+          <button class="add-button" type="submit">
+            <span aria-hidden="true">＋</span> Add to my recipes
+          </button>
+        </form>
+
+        <section class="recipe-list-section" aria-labelledby="recipes-heading">
+          <div class="list-heading">
+            <div>
+              <p class="eyebrow">THE GOOD STUFF</p>
+              <h2 id="recipes-heading">Your recipes <span id="recipe-count">0</span></h2>
+            </div>
+            <span class="list-caption">A collection of favorites</span>
+          </div>
+          <div class="recipe-list" id="recipe-list" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <span>Good things are always cooking.</span>
+        <span class="footer-sparkle" aria-hidden="true">✳</span>
+      </footer>
+    </main>
+  </body>
+</html>
